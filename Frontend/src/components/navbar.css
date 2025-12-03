@@ -1,0 +1,75 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background-color: #1e2a38;
+  color: white;
+  position: relative; /* Ensure z-index works */
+  z-index: 1000; /* Keep navbar on top */
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #4ade80;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4ade80;
+}
+
+/* Auth Buttons Container */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* Common Button Styles for Links */
+.nav-btn {
+  margin-left: 25px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: medium;
+  text-decoration: none; /* Remove underline from Link */
+  display: inline-block; /* Ensure padding works */
+  text-align: center;
+}
+
+.login {
+  background: #334155;
+  color: white;
+  font-weight: bold;
+}
+
+.register {
+  background: #4ade80;
+  color: black;
+  font-weight: bold;
+}
+
+.login:hover {
+  background: #ffffff;
+  color: black;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.register:hover {
+  background: #ffffff;
+  color: black;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}

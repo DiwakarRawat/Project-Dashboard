@@ -1,0 +1,199 @@
+.student-register-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #023d3d, #065b6a, #0b3a4c);
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.student-register-form {
+  background: rgba(10, 40, 55, 0.9);
+  padding: 20px 35px;
+  border-radius: 25px;
+  max-width: 600px;
+  width: 100%;
+  color: #ffffff;
+  box-shadow: 50px 12px 40px rgba(0, 0, 0, 0.25);
+  animation: fadeSlide 1s ease forwards;
+}
+
+@keyframes fadeSlide {
+  0% { transform: translateY(-40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.student-register-form h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #349ef6;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-box label {
+  font-size: 1rem;
+  margin-bottom: 7px;
+  color: #ffffff;
+}
+
+.input-box input {
+  padding: 12px 46px;
+  border: 1px solid #4dabf7;
+  border-radius: 10px;
+  background: rgba(15, 25, 40, 0.85);
+  color: #efebeb;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-box input:focus {
+  border-color: #4fd1c5;
+  box-shadow: 0 0 12px rgba(72, 187, 179, 0.5);
+  outline: none;
+}
+
+.password-field {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 65%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #4fd1c5;
+  font-size: 0.9rem;
+  font-weight: bold;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: #38b2ac;
+}
+
+.error-text {
+  color: #e71518;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: -8px;
+  margin-bottom: 13px;
+  text-align: left;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(90deg, #38b2ac, #319795);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  margin-top: 25px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #4fd1c5, #38b2ac);
+  box-shadow: 0 0 20px rgba(56, 178, 172, 0.6);
+}
+
+.btn:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+/* Add Members button */
+.add-btn {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+.add-btn:hover {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
+
+/* Add More Members button */
+.add-more-btn {
+  background: linear-gradient(90deg, #9333ea, #6b21a8);
+}
+
+.add-more-btn:hover {
+  background: linear-gradient(90deg, #a855f7, #9333ea);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+/* Members Section */
+.members-section {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(79, 209, 197, 0.4);
+  animation: fadeInScale 0.5s ease forwards;
+}
+
+@keyframes fadeInScale {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.members-section h2 {
+  color: #4fd1c5;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.member-box {
+  background: rgba(20, 40, 60, 0.9);
+  border: 1px solid #349ef6;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.member-box h3 {
+  color: #38b2ac;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .student-register-form {
+    padding: 20px 18px;
+  }
+  .student-register-form h1 {
+    font-size: 1.8rem;
+  }
+  .members-section h2 {
+    font-size: 1.4rem;
+  }
+}

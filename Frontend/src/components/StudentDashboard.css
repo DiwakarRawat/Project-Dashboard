@@ -1,0 +1,418 @@
+/* --- General --- */
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f1f5f9;
+    color: #334155;
+  }
+  
+  .dashboard-container {
+    min-height: 100vh;
+    padding: 16px;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e0f7eb 100%);
+  }
+  
+  /* --- Header --- */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #334155;
+    background: linear-gradient(to right, #334155, #4ade80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .dashboard-header button {
+    background: #4ade80;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);
+    transition: 0.3s ease;
+  }
+  
+  .dashboard-header button:hover {
+    background: #22c55e;
+    box-shadow: 0 6px 18px rgba(34, 197, 94, 0.4);
+  }
+  
+  /* --- Project Section --- */
+  .project-section {
+    background: #fff;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(51, 65, 85, 0.08);
+    margin-bottom: 24px;
+    border-left: 6px solid #4ade80;
+    transition: transform 0.3s;
+  }
+  
+  .project-section:hover {
+    transform: translateY(-4px);
+  }
+  
+  .project-section h2 {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #334155;
+  }
+  
+  .project-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    color: #4ade80;
+  }
+  
+  .project-section p {
+    margin-top: 12px;
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  /* --- Grid Layout --- */
+  .dashboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  /* Left section (Documents) */
+  .documents-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 280px;
+  }
+  
+  /* Right section (Mentor, Team, Remarks) */
+  .side-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 280px;
+  }
+  
+  /* --- Cards --- */
+  .documents-list-wrapper,
+  .document-uploader,
+  .mentor-section,
+  .team-section,
+  .remarks-section {
+    background: #fff;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(51, 65, 85, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .documents-list-wrapper:hover,
+  .document-uploader:hover,
+  .mentor-section:hover,
+  .team-section:hover,
+  .remarks-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(51, 65, 85, 0.12);
+  }
+  
+  /* --- Documents List --- */
+  .document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .document-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f5f9;
+    padding: 14px;
+    border-radius: 14px;
+    border-left: 4px solid #4ade80;
+    transition: all 0.2s;
+  }
+  
+  .document-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(51, 65, 85, 0.1);
+  }
+  
+  .doc-name {
+    font-weight: 600;
+    color: #334155;
+    margin: 0;
+  }
+  
+  .doc-desc {
+    font-size: 14px;
+    color: #64748b;
+    margin: 2px 0 0;
+  }
+  
+  .document-item button {
+    background: #4ade80;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 6px;
+    transition: 0.3s;
+  }
+  
+  .document-item button:hover {
+    background: #22c55e;
+  }
+  
+  /* --- Empty Document --- */
+  .empty-docs {
+    text-align: center;
+    padding: 32px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    border: 2px dashed #4ade80;
+  }
+  
+  .empty-docs p {
+    color: #166534;
+    font-weight: 700;
+  }
+  
+  /* --- Document Uploader --- */
+  .document-uploader h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #334155;
+  }
+  
+  .document-uploader form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .document-uploader input,
+  .document-uploader textarea {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .document-uploader input:focus,
+  .document-uploader textarea:focus {
+    border-color: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.25);
+  }
+  
+  .document-uploader button {
+    background: #334155;
+    color: #fff;
+    padding: 12px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .document-uploader button:hover {
+    background: #1e293b;
+  }
+  
+  /* --- Modal --- */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(31, 41, 55, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    z-index: 50;
+  }
+  
+  .modal-box {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s;
+  }
+  
+  .modal-content {
+    padding: 24px;
+  }
+  
+  .modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #cbd5e1;
+  }
+  
+  .confirm-title {
+    color: #ef4444;
+  }
+  
+  .prompt-title {
+    color: #4ade80;
+  }
+  
+  .modal-message {
+    margin-bottom: 16px;
+    color: #475569;
+  }
+  
+  .modal-textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid #cbd5e1;
+    resize: none;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  
+  .modal-btn {
+    padding: 10px 18px;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+  }
+  
+  .cancel-btn {
+    background-color: #e5e7eb;
+    color: #334155;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #cbd5e1;
+  }
+  
+  .confirm-btn.save-action {
+    background-color: #334155;
+    color: #fff;
+  }
+  
+  .confirm-btn.save-action:hover {
+    background-color: #1e293b;
+  }
+  
+  .confirm-btn.confirm-action {
+    background-color: #ef4444;
+    color: #fff;
+  }
+  
+  .confirm-btn.confirm-action:hover {
+    background-color: #dc2626;
+  }
+  
+  /* --- Toast --- */
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 50;
+  }
+  
+  .toast-box {
+    padding: 14px 22px;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    animation: pulse 1.5s infinite;
+  }
+  
+  .toast-box.success {
+    background-color: #4ade80;
+  }
+  
+  .toast-box.info {
+    background-color: #334155;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  
+  /* --- Responsive --- */
+  @media (max-width: 1024px) {
+    .dashboard-grid {
+      flex-direction: column;
+    }
+    .documents-section, .side-section {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .dashboard-header h1 {
+      font-size: 24px;
+    }
+  }
+
+  .edit-profile-fields {
+    display: flex; 
+    flex-direction: column; 
+    width: 100%;
+    gap: 10px; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.edit-profile-fields label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #152030; /* Light color for readability */
+}
+
+.edit-profile-fields input.modal-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #349ef6;
+    border-radius: 8px;
+    background: #152030; /* Darker background for inputs */
+    color: #ffffff;
+}

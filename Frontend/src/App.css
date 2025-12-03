@@ -1,0 +1,42 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App container */
+.app {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+  min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+  background-color: #2d6cdf;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main layout */
+.app-main {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}

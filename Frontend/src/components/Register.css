@@ -1,0 +1,110 @@
+/* Register Page */
+.register-page {
+  background: linear-gradient(135deg, #203348, #1b2a41);
+  min-height: 79.4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 80px 70px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 50px 12px 40px rgba(0, 0, 0, 0.25);
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  z-index: 2; /* ensures content is above blobs */
+}
+
+.register-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bolder;
+  color: #349ef6;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.register-btn {
+  background: #2f8bd6;
+  color: #ffffff;
+  border: none;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.register-btn:hover {
+  background: #ffffff;
+  color: #073aa0;
+  font-weight: bolder;
+  transform: scale(1.05);
+}
+
+/* Animated Background Blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.6;
+  animation: float 15s infinite alternate ease-in-out;
+}
+
+.blob1 {
+  width: 300px;
+  height: 300px;
+  background: #4dabf7;
+  top: -50px;
+  left: -50px;
+}
+
+.blob2 {
+  width: 400px;
+  height: 400px;
+  background: #2575fc;
+  bottom: -100px;
+  right: -100px;
+  animation-duration: 20s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, -30px) scale(1.1);
+  }
+  100% {
+    transform: translate(-30px, 50px) scale(0.9);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .register-container {
+    padding: 30px 20px;
+  }
+
+  .register-title {
+    font-size: 1.5rem;
+  }
+
+  .blob1, .blob2 {
+    width: 200px;
+    height: 200px;
+  }
+}

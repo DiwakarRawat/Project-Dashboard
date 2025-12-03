@@ -1,0 +1,136 @@
+.teacher-register-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #032d50, #113867, #182a46);
+  background-size: 200% 200%;
+  animation: gradientMove 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.teacher-register-form {
+  background: rgba(17, 34, 64, 0.95);
+  padding: 20px 35px;
+  border-radius: 25px;
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 50px 12px 40px rgba(0, 0, 0, 0.25);
+  animation: dropIn 1s ease forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes dropIn {
+  0% { transform: translateY(-40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.teacher-register-form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #349ef6;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.input-box label {
+  font-size: 1rem;
+  margin-bottom: 7px;
+  color: #ffffff;
+}
+
+.input-box input {
+  padding: 12px 46px;
+  border: 1px solid #4dabf7;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.8);
+  color: #efebeb;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-box input:focus {
+  border-color: #73b3ff;
+  box-shadow: 0 0 12px rgba(77, 171, 247, 0.6);
+  outline: none;
+}
+
+.password-field {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 2px;
+  top: 67%;
+  transform: translateY(-67%);
+  cursor: pointer;
+  color: #439de8;
+  font-size: 0.9rem;
+  font-weight: bold;
+  user-select: none;
+}
+
+.btn {
+  display: inline-flex; 
+  justify-content: center;    
+  align-items: center;       
+  width: 200px;               
+  padding: 16px;
+  background: linear-gradient(90deg, #4dabf7, #3b82f6);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  margin: 20px auto;
+  position: relative;
+  text-align: center;
+  display: block;   
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #73b3ff, #60a5fa);
+  box-shadow: 0 0 20px rgba(77, 171, 247, 0.6);
+}
+
+.error-text {
+  color: #e71518;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: -8px;
+  margin-bottom: 15px;
+  text-align: left;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .teacher-register-form {
+    padding: 30px 20px;
+  }
+  .teacher-register-form h1 {
+    font-size: 1.6rem;
+  }
+}
